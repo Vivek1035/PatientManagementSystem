@@ -1,4 +1,4 @@
-###  Creates patient to the entity
+###  Creates patient in the entity
 POST http://localhost:4000/patients
 Content-Type: application/json
 

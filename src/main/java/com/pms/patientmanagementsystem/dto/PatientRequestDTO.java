@@ -1,5 +1,6 @@
 package com.pms.patientmanagementsystem.dto;
 
+import com.pms.patientmanagementsystem.dto.validators.CreatePatientValidationGroup;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -19,7 +20,7 @@ public class PatientRequestDTO {
     @NotBlank(message = "Date of Birth is Required")
     private String dateOfBirth;
 
-    @NotBlank(message = "Registered Date is Required")
+    @NotBlank(groups = CreatePatientValidationGroup.class, message = "Registered Date is Required")
     private String registeredDate;
 
     public String getName() {
