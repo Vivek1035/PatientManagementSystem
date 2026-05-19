@@ -1,7 +1,0 @@
-package com.pms.patientmanagementsystem.exception;
-
-public class PatientNotFoundException extends RuntimeException {
-    public PatientNotFoundException(String message) {
-        super(message);
-    }
-}
