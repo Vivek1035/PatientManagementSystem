@@ -1,10 +1,10 @@
-package com.pms.patientmanagementsystem;
+package com.pms.patientservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PatientManagementSystemApplicationTests {
+class PatientServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

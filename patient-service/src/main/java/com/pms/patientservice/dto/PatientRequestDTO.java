@@ -1,6 +1,6 @@
-package com.pms.patientmanagementsystem.dto;
+package com.pms.patientservice.dto;
 
-import com.pms.patientmanagementsystem.dto.validators.CreatePatientValidationGroup;
+import com.pms.patientservice.dto.validators.CreatePatientValidationGroup;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -1,13 +1,13 @@
-package com.pms.patientmanagementsystem;
+package com.pms.patientservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PatientManagementSystemApplication {
+public class PatientServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PatientManagementSystemApplication.class, args);
+		SpringApplication.run(PatientServiceApplication.class, args);
 	}
 
 }
