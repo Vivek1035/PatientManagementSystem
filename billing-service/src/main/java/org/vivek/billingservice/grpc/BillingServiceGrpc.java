@@ -15,7 +15,7 @@ public class BillingServiceGrpc extends billing.BillingServiceGrpc.BillingServic
     public void createBillingAccount(BillingRequest billingRequest, StreamObserver<BillingResponse> responseObserver) {
         log.info("createBillingAccount request received {} ", billingRequest.toString());
 
-        // Business Logic
+        // Business Logic - e.g. save account in DB, validate user, check duplicates, generate accountId, publish Kafka event maybe
 
         BillingResponse response = BillingResponse.newBuilder()
                 .setAccountId("12345")

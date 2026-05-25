@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class BillingServiceGrpcClient {
     private static final Logger log = LoggerFactory.getLogger(BillingServiceGrpcClient.class);
+
     private final BillingServiceGrpc.BillingServiceBlockingStub blockingStub;
     public BillingServiceGrpcClient(
             @Value("${billing.service.address:localhost}") String serverAddress,
@@ -25,7 +26,7 @@ public class BillingServiceGrpcClient {
     }
 
     public BillingResponse createBillingAccount(String patientId, String name, String email) {
-        BillingRequest request = BillingRequest.newBuilder().setName(name).setEmail(email).build();
+        BillingRequest request = BillingRequest.newBuilder().setPatientId(patientId).setName(name).setEmail(email).build();
         BillingResponse response = blockingStub.createBillingAccount(request);
         log.info("Received response from billing service via GRPC: {}", response);
         return response;
