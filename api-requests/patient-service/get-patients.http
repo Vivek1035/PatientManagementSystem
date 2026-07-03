@@ -1,4 +1,4 @@
 ### GET request to get all patients
-GET http://localhost:4004/api/patients?page=1&sort=desc&searchValue=vivek&size=2
+GET http://localhost:4004/api/patients?page=2&sort=asc&size=10&sortField=email
 Authorization: Bearer {{token}}
 ###
