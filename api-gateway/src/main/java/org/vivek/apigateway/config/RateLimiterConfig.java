@@ -1,6 +1,7 @@
 package org.vivek.apigateway.config;
 
 import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
+import org.springframework.cloud.gateway.filter.ratelimit.RedisRateLimiter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import reactor.core.publisher.Mono;
@@ -11,6 +12,6 @@ public class RateLimiterConfig {
     @Bean
     public KeyResolver ipKeyResolver() {
         return exchange -> Mono.just(
-                exchange.getRequest().getRemoteAddress().toString());
+                exchange.getRequest().getRemoteAddress().getAddress().getHostAddress());
     }
 }

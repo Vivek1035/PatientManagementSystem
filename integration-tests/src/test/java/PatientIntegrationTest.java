@@ -38,12 +38,12 @@ public class PatientIntegrationTest {
                     .header("Authorization", "Bearer " + token)
                     .get("/api/patients");
 
-            System.out.printf("Request %d -> Status: %d%n", i, response.getStatusCode());
+            System.out.printf("Request %d -> Status: %d%n", i, response.statusCode());
 
-            if (response.getStatusCode() == 429) {
+            if(response.statusCode()== 429){
                 tooManyRequests++;
             }
-            //Thread.sleep(100);
+            Thread.sleep(100);
         }
 
         assertTrue(tooManyRequests >= 1,
