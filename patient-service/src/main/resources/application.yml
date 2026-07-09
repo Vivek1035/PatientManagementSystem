@@ -51,4 +51,19 @@ resilience4j:
         max-attempts: 3
         wait-duration: 500ms
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics,cache
+
+  endpoint:
+    prometheus:
+      access: unrestricted
+
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
 
