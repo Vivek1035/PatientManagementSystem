@@ -1,0 +1,5 @@
+### GET request to get appointments in particular time range
+GET http://localhost:4006/appointments?from=2025-05-20T00:00:00&to=2025-06-20T23:00:00
+Content-Type: application/json
+
+###

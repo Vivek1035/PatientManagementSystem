@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: appointment-service
+
+  # Datasource
+  datasource:
+      url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://appointment-service-db:5432/db}
+      username: ${SPRING_DATASOURCE_USERNAME:admin_user}
+      password: ${SPRING_DATASOURCE_PASSWORD:admin}
+
+  # Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  # SQL Init Mode
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 4006
+
+
+
+
+
