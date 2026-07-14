@@ -18,6 +18,13 @@ spring:
     init:
       mode: always
 
+  kafka:
+    consumer:
+      key-deserializer: ${SPRING_KAFKA_CONSUMER_KEY_DESERIALIZER:org.apache.kafka.common.serialization.StringDeserializer}
+      value-deserializer: ${SPRING_KAFKA_CONSUMER_VALUE_DESERIALIZER:org.apache.kafka.common.serialization.ByteArrayDeserializer}
+      group-id: appointment-service
+
+
 server:
   port: 4006
 
